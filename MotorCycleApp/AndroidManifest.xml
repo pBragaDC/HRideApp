@@ -26,6 +26,10 @@
             android:name=".MainScreen"
             android:label="@string/title_activity_main_screen" >
         </activity>
+        <activity
+            android:name=".EventActivity"
+            android:label="@string/title_activity_event" >
+        </activity>
     </application>
 
 </manifest>
