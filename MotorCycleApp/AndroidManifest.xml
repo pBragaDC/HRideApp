@@ -7,6 +7,10 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="19" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -14,7 +18,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".SplashActivity"
+            android:name="pc.motorcycle.androidapp.AndroidActivites.SplashActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,13 +27,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainScreen"
-            android:label="@string/title_activity_main_screen" >
-        </activity>
-        <activity
-            android:name=".EventActivity"
+            android:name="pc.motorcycle.androidapp.AndroidActivites.EventActivity"
             android:label="@string/title_activity_event" >
         </activity>
+        <activity android:name="pc.motorcycle.androidapp.AndroidActivites.CreateActivity"></activity>
+        <activity android:name="pc.motorcycle.androidapp.AndroidActivites.Login"></activity>
+        <activity android:name="pc.motorcycle.androidapp.AndroidActivites.Settings"></activity>
+        <activity android:name="pc.motorcycle.androidapp.AndroidActivites.SignUp"></activity>
     </application>
 
 </manifest>

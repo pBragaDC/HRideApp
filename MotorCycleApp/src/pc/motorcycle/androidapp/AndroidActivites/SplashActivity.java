@@ -1,5 +1,7 @@
-package pc.motorcycle.androidapp;
+package pc.motorcycle.androidapp.AndroidActivites;
 
+import pc.motorcycle.androidapp.R;
+import pc.motorcycle.androidapp.R.layout;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,7 +29,7 @@ public class SplashActivity extends Activity
             public void run() {
                 // This method will be executed once the timer is over
                 // Start your app main activity
-                Intent i = new Intent(SplashActivity.this, MainScreen.class);
+                Intent i = new Intent(SplashActivity.this, Login.class);
                 startActivity(i);
  
                 // close this activity

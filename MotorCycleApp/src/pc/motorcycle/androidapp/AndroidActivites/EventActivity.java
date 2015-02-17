@@ -1,5 +1,9 @@
-package pc.motorcycle.androidapp;
+package pc.motorcycle.androidapp.AndroidActivites;
 
+import pc.motorcycle.androidapp.R;
+import pc.motorcycle.androidapp.R.id;
+import pc.motorcycle.androidapp.R.layout;
+import pc.motorcycle.androidapp.R.menu;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
