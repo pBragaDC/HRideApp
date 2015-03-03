@@ -56,7 +56,7 @@ public class Settings extends ListActivity {
 	         Toast.makeText(getBaseContext(), x ,Toast.LENGTH_SHORT).show();
 	         
 	         if ( x == "About") {
-	         Intent i = new Intent(Settings.this, CreateActivity.class);
+	         Intent i = new Intent(Settings.this, About.class);
 	         Settings.this.startActivity(i);
 	         Settings.this.finish();
 	         }
