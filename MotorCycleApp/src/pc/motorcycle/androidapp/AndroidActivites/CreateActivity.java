@@ -14,6 +14,7 @@ import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class CreateActivity extends Activity {
 
@@ -32,7 +33,8 @@ public class CreateActivity extends Activity {
 
 			@Override
 			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
+				
+		         Toast.makeText(getBaseContext(), "Submitted" ,Toast.LENGTH_SHORT).show();
 				Intent i = new Intent(CreateActivity.this, EventActivity.class);
 				startActivity(i);
 			}

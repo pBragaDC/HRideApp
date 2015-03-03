@@ -11,6 +11,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="Here at G.I.P we strive to make perfection. \n Frankly this is very easy because we are Gods amongst Men.Live2Ride is an app that will connect the riders of SWFL into a closer community of people. We were determined to unite the riders  and make it easier to find local rides and events." />
 
 </RelativeLayout>
