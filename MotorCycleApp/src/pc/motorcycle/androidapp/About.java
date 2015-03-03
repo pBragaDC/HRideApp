@@ -1,7 +1,11 @@
 package pc.motorcycle.androidapp;
 
+import pc.motorcycle.androidapp.AndroidActivites.Login;
+import pc.motorcycle.androidapp.AndroidActivites.Settings;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -12,6 +16,17 @@ public class About extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_about);
 	}
+	@Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) { 
+        	Intent i = new Intent(About.this, Settings.class);
+        	startActivity(i);
+        	finish();           
+        	return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

@@ -12,29 +12,32 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="" />
 
     <Spinner
         android:id="@+id/spinner1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignTop="@+id/textView1"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown" />
 
-    <TimePicker
-        android:id="@+id/timePicker1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/spinner1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp" />
-
     <DatePicker
         android:id="@+id/datePicker1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="18dp" />
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignRight="@+id/spinner1"
+        android:layout_below="@+id/timePicker1"
+        android:layout_marginRight="48dp"
+        android:calendarViewShown="false" />
+
+    <TimePicker
+        android:id="@+id/timePicker1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/spinner1"
+        android:layout_marginTop="35dp"
+        android:layout_toRightOf="@+id/textView1" />
 
 </RelativeLayout>
