@@ -2,13 +2,17 @@ package pc.motorcycle.androidapp.AndroidActivites;
 
 import java.util.ArrayList;
 
-
-
-
+import pc.motorcycle.androidapp.About;
+import pc.motorcycle.androidapp.FAQ;
+import pc.motorcycle.androidapp.Help;
+import pc.motorcycle.androidapp.Logout;
 import pc.motorcycle.androidapp.R;
 import pc.motorcycle.androidapp.R.id;
 import pc.motorcycle.androidapp.R.layout;
 import pc.motorcycle.androidapp.R.menu;
+import pc.motorcycle.androidapp.Settme;
+import pc.motorcycle.androidapp.ServerActivities.CompletedTasks;
+import pc.motorcycle.androidapp.ServerActivities.HttpAsyncTask;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
@@ -21,16 +25,16 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class Settings extends ListActivity {
+	ArrayList<String> info;
+	String x;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		
-		
-		
-		
+
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_settings);
-		ArrayList<String> info = new ArrayList<String>();
+		info = new ArrayList<String>();
 		info.add("About");
 		info.add("FAQ");
 		info.add("Help");
@@ -47,13 +51,64 @@ public class Settings extends ListActivity {
 	public void onListItemClick(ListView l, View v, int position, long id)
 	{
 	        super.onListItemClick(l, v, position, id);
-	        Object o = this.getListAdapter().getItem(position);
-	        String pen = o.toString();
-	        Toast.makeText(this, "You have chosen the pen: " + " " + pen, Toast.LENGTH_LONG).show();
-	        //Intent ii = new Intent(pen);
-			//startActivity(ii);
-	    
+	         x = info.get(position);
+	         Toast.makeText(getBaseContext(), x ,Toast.LENGTH_SHORT).show();
+	         
+	         if ( x == "About") {
+	         Intent i = new Intent(Settings.this, EventActivity.class);
+	         Settings.this.startActivity(i);
+	         Settings.this.finish();
+	         }
+	         if ( x == "FAQ") {
+		         Intent i = new Intent(Settings.this, FAQ.class);
+		         Settings.this.startActivity(i);
+		         Settings.this.finish();
+		         }
+	         if ( x == "Help") {
+		         Intent i = new Intent(Settings.this, Help.class);
+		         Settings.this.startActivity(i);
+		         Settings.this.finish();
+		         }
+	         if ( x == "Settings") {
+		         Intent i = new Intent(Settings.this, Settme.class);
+		         Settings.this.startActivity(i);
+		         Settings.this.finish();
+		         }
+	         if ( x == "Logout") {
+					Thread thread = new Thread(new Runnable()  {
+		                @Override
+		                public void run() {
+									HttpAsyncTask GPS = new HttpAsyncTask(
+											new CompletedTasks() {
+												public void callBack(
+														String result) {
+													Intent ii = new Intent(
+															Settings.this,
+															Login.class);
+													Settings.this.startActivity(ii);
+													Settings.this.finish();
+												}
+													});
+
+									if (GPS.isConnected(Settings.this)) {
+										GPS.execute("logout.php");
+									}
+								 
+		            };
+		           
+		            });
+					
+				thread.start();
+				}
+	         
 	}
+	 public void onBackPressed()
+	    {
+	        super.onBackPressed();
+	        super.finish(); 
+	        //Intent
+	    }
+		
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

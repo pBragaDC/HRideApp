@@ -3,9 +3,6 @@ package pc.motorcycle.androidapp.AndroidActivites;
 import java.util.StringTokenizer;
 
 import pc.motorcycle.androidapp.R;
-import pc.motorcycle.androidapp.R.id;
-import pc.motorcycle.androidapp.R.layout;
-import pc.motorcycle.androidapp.R.string;
 import pc.motorcycle.androidapp.ServerActivities.AppData;
 import pc.motorcycle.androidapp.ServerActivities.CompletedTasks;
 import pc.motorcycle.androidapp.ServerActivities.EncryptString;
