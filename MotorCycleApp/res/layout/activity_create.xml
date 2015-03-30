@@ -8,15 +8,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Login" >
 
-   
-
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:drawable/btn_dropdown"
-        android:spinnerMode="dropdown" />
-
     <TextView
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
@@ -32,16 +23,14 @@
     <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="135dp"
         android:layout_above="@+id/submit"
         android:layout_alignLeft="@+id/timePicker1"
         android:layout_alignRight="@+id/datePicker1"
-        android:layout_below="@+id/timePicker1"
-        android:background="#ffffff" 
-        android:gravity="left|top"
+        android:background="#ffffff"
         android:ems="10"
-        android:inputType="textMultiLine" 
-        />
+        android:gravity="left|top"
+        android:inputType="textMultiLine" />
     
       <TextView
         android:id="@+id/editText3"
@@ -62,23 +51,38 @@
           android:layout_alignLeft="@+id/editText2"
           android:layout_alignParentBottom="true"
           android:layout_alignRight="@+id/editText2"
-          android:layout_marginBottom="18dp"
           android:text="Submit" />
-
-      <DatePicker
-          android:id="@+id/datePicker1"
-          android:layout_width="150dp"
-          android:layout_height="150dp"
-          android:layout_alignParentRight="true"
-          android:layout_below="@+id/spinner1"
-          android:layout_marginTop="14dp"
-          android:calendarViewShown="false" />
 
       <TimePicker
           android:id="@+id/timePicker1"
           android:layout_width="150dp"
           android:layout_height="150dp"
           android:layout_alignLeft="@+id/spinner1"
-          android:layout_alignTop="@+id/datePicker1" />
+          android:layout_centerVertical="true" />
+
+      <DatePicker
+          android:id="@+id/datePicker1"
+          android:layout_width="150dp"
+          android:layout_height="150dp"
+          android:layout_alignRight="@+id/spinner1"
+          android:layout_alignTop="@+id/timePicker1"
+          android:calendarViewShown="false" />
+
+      <EditText
+          android:id="@+id/editText4"
+          android:layout_width="400dp"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:ems="10" 
+          android:hint="Title"/>
+
+      <Spinner
+          android:id="@+id/spinner1"
+          android:layout_width="match_parent"
+          android:layout_height="100dp"
+          android:layout_above="@+id/editText1"
+          android:layout_alignLeft="@+id/editText4"
+          android:background="@android:drawable/btn_dropdown"
+          android:spinnerMode="dropdown" />
 
 </RelativeLayout>

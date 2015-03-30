@@ -1,20 +1,26 @@
 package pc.motorcycle.androidapp.AndroidActivites;
 
+import java.util.ArrayList;
+
 import pc.motorcycle.androidapp.R;
 import pc.motorcycle.androidapp.R.id;
 import pc.motorcycle.androidapp.R.layout;
 import pc.motorcycle.androidapp.R.menu;
 import android.app.Activity;
+import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
-public class EventActivity extends Activity {
+public class EventActivity extends ListActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.event_layout);
+		
 	}
 
 	@Override
