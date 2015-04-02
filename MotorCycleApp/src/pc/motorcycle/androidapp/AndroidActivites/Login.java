@@ -112,14 +112,14 @@ public class Login extends Activity {
 														String result) {
 													
 
-													if (result.startsWith("5"))
+													if (result.contains("5"))
 													{
 														Toast.makeText(getApplicationContext(),
 																"Invalid username or password!",
 																Toast.LENGTH_LONG).show();
 					
 													 }
-												 if (result.startsWith("0")) {
+												 if (result.contains("0")) {
 													HttpAsyncTask nextTask = new HttpAsyncTask(
 															new CompletedTasks() {
 																public void callBack(
@@ -152,8 +152,8 @@ public class Login extends Activity {
 									
 									if (loginTask.isConnected(Login.this)) {
 										loginTask.execute("login.php",
-												"username", AppData.username,
-												"password", encryptedPassword);
+												"Username", AppData.username,
+												"Password", passwordString);
 									}
 								} 
 							};

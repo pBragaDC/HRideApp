@@ -26,7 +26,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 public class HttpAsyncTask extends AsyncTask<String, Void, String> {
-	private static String serverURL = "http://quickchat.t15.org/";
+	private static String serverURL = "http://rideme.site88.net/";
 	private static HttpClient httpclient = new DefaultHttpClient();
 	private static HttpContext localContext = new BasicHttpContext();
 	private static boolean setupCookie = false;

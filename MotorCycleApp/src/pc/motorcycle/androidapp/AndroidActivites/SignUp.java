@@ -99,14 +99,14 @@ public class SignUp extends Activity {
 													|| encryptedPassword.length() != 512) {
 											HttpAsyncTask task = new HttpAsyncTask(new CompletedTasks(){
 												public void callBack(String result) {
-													if (result.startsWith("5"))
+													if (result.contains("5"))
 													{
 														Toast.makeText(getApplicationContext(),
 																"Username Exists!",
 																Toast.LENGTH_LONG).show();
 					
 													 }
-													if (result.startsWith("0")) {
+													if (result.contains("0")) {
 													Intent i = new Intent(SignUp.this, Login.class);
 											    	SignUp.this.startActivity(i);
 													SignUp.this.finish();
@@ -116,7 +116,7 @@ public class SignUp extends Activity {
 											});
 											
 											if (task.isConnected(SignUp.this)) {
-												task.execute("register.php", "username", usernameString, "password", encryptedPassword);
+												task.execute("register.php", "Username", usernameString, "Password", encryptedPassword);
 											}
 										};
 									}

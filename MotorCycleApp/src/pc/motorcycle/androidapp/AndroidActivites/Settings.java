@@ -82,11 +82,13 @@ public class Settings extends ListActivity {
 											new CompletedTasks() {
 												public void callBack(
 														String result) {
-													Intent ii = new Intent(
+													Intent i = new Intent(
 															Settings.this,
 															Login.class);
-													Settings.this.startActivity(ii);
-													Settings.this.finish();
+													Settings.this
+															.startActivity(i);
+													Settings.this
+															.finish();
 												}
 													});
 
